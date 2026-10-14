@@ -1,0 +1,9 @@
+.destacado {
+    font-style: italic;
+    font-weight: bold;
+    color: blue;    
+}
+
+.tipografia {
+    font-family: sans-serif;
+}

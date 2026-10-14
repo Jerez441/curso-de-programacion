@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+
+img{
+
+    box-shadow: #000000;
+
+    border: 50px groove rgb(163, 187, 2);
+    border-radius: 100px;
+  
+}

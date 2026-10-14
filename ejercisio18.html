@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio 18 </title>
+</head>
+<body>
+    <form action="/procesar" method="POST">
+        <fieldset>
+            <legend>Género (seleccion unica)</legend>
+            <label>
+                <input type="radio" name="genero" value="masculino"> Masculino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="femenino"> Femenino
+            </label>
+            <label>
+                <input type="radio" name="genero" valu="Prefiero no decirlo">Prefiero no decirlo
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Intereses (seleccion multiple)</legend>
+            <label>
+                <input type="checkbox" name="intereses" value="deportes"> Deportes
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="musica"> Música
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="programacion"> Programación
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="ver series"> ver series
+            </label>
+            <label>
+                <input type="checkbox" name="intereses" value="Practicar algun deporte">Practicar algun deporte
+            </label>
+        </fieldset>
+
+        <br>
+        <label for="pais">País de residencia:</label>
+        <select name="pais" id="pais">
+            <option value="ve" selected>Venezuela</option>
+            <option value="br">Brasil</option>
+            <option value="pe">Peru</option>
+            <option value="ec">Ecuador</option>
+            <option value="ar">Argentina</option>
+            <option value="ur">Uruguay</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
