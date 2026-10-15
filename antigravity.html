@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía interactiva completa de la Copa Sudamericana (CONMEBOL Sudamericana): Historia, máximos campeones, formato del torneo, récords, hazañas memorables y trivia interactiva.">
+    <title>CONMEBOL Sudamericana | La Gran Conquista</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #070b19;
+            --bg-card: rgba(16, 24, 48, 0.78);
+            --bg-card-hover: rgba(22, 34, 68, 0.88);
+            --border-glow: rgba(0, 195, 255, 0.25);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --primary: #00b4d8;
+            --primary-glow: #00f2fe;
+            --primary-gradient: linear-gradient(135deg, #0072ff 0%, #00d2ff 100%);
+            --gold: #ffb703;
+            --gold-gradient: linear-gradient(135deg, #ffd700 0%, #ff8800 100%);
+            --silver: #cbd5e1;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-green: #10b981;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 114, 255, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 183, 3, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.05) 0%, transparent 60%);
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Classes */
+        .glass {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .glass:hover {
+            border-color: var(--border-glow);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 11, 25, 0.85);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 75px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .brand-logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #070b19;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #ffffff, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .brand-subtitle {
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-glow);
+            transform: translateY(-2px);
+        }
+
+        .nav-cta {
+            background: var(--primary-gradient);
+            color: #070b19 !important;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
+            transition: var(--transition) !important;
+        }
+
+        .nav-cta:hover {
+            box-shadow: 0 6px 24px rgba(0, 242, 254, 0.7);
+            transform: scale(1.05) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 50px 0 70px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 180, 216, 0.12);
+            border: 1px solid rgba(0, 210, 255, 0.35);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .badge-tag i {
+            color: var(--gold);
+        }
+
+        h1.hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.4rem;
+            font-weight: 900;
+            line-height: 1.08;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title span.highlight {
+            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            font-size: 1.12rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 580px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: #070b19;
+            box-shadow: 0 8px 24px rgba(0, 114, 255, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 210, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Image Card */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 180, 216, 0.25);
+            border: 2px solid rgba(0, 210, 255, 0.3);
+            transition: var(--transition);
+        }
+
+        .hero-image-wrapper:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-glow);
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 210, 255, 0.4);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            right: 20px;
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: rgba(10, 17, 38, 0.92);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .floating-stat {
+            text-align: center;
+        }
+
+        .floating-stat-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .floating-stat-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .floating-divider {
+            width: 1px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stats Bar */
+        .stats-strip {
+            margin-top: 50px;
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Section Global Styles */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .section-badge {
+            font-size: 0.8rem;
+            color: var(--gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Palmarés / Champions Cards */
+        .champions-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-gradient);
+            color: #070b19;
+            font-weight: 700;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(0, 180, 216, 0.35);
+        }
+
+        .search-box {
+            position: relative;
+            min-width: 260px;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(16, 24, 48, 0.9);
+            border: 1px solid var(--border-subtle);
+            border-radius: 30px;
+            padding: 10px 18px 10px 42px;
+            color: white;
+            font-size: 0.9rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.3);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .champions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .champion-card {
+            border-radius: var(--radius-md);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .champion-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .champion-card.multi-champ::before {
+            background: var(--gold-gradient);
+            width: 6px;
+        }
+
+        .champion-card:hover {
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+        }
+
+        .champion-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .champion-year-badge {
+            background: rgba(0, 180, 216, 0.15);
+            color: var(--primary-glow);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        .champion-country {
+            font-size: 1.25rem;
+        }
+
+        .champion-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .champion-runner-up {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        .champion-score {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .trophies-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        /* Top Champions Spotlight */
+        .top-champs-section {
+            margin-top: 50px;
+        }
+
+        .kings-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .king-card {
+            padding: 24px 16px;
+            text-align: center;
+            border-radius: var(--radius-md);
+            position: relative;
+            background: linear-gradient(180deg, rgba(20, 30, 60, 0.6) 0%, rgba(10, 16, 35, 0.85) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            transition: var(--transition);
+        }
+
+        .king-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(255, 183, 3, 0.2);
+        }
+
+        .king-crown {
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .king-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .king-country {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .king-stars {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .king-years {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary-glow);
+        }
+
+        /* Formato de Competición */
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .format-step {
+            padding: 30px 24px;
+            border-radius: var(--radius-lg);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .format-step:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .step-number {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            color: #070b19;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .step-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .step-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .step-tag {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        /* Grand Final Perks */
+        .final-banner {
+            margin-top: 40px;
+            padding: 36px 40px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, rgba(0, 114, 255, 0.2) 0%, rgba(255, 183, 3, 0.15) 100%), var(--bg-card);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .final-info h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .final-info p {
+            color: var(--text-muted);
+            max-width: 650px;
+            font-size: 0.98rem;
+        }
+
+        .final-perks {
+            display: flex;
+            gap: 20px;
+        }
+
+        .perk-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(10, 16, 35, 0.7);
+            border: 1px solid var(--border-subtle);
+            padding: 12px 18px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--gold);
+        }
+
+        /* Hazañas Históricas */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        .story-card {
+            border-radius: var(--radius-lg);
+            padding: 32px 26px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .story-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .story-badge {
+            display: inline-block;
+            background: rgba(255, 183, 3, 0.15);
+            color: var(--gold);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .story-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+
+        .story-excerpt {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .story-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.85rem;
+            color: var(--primary-glow);
+            font-weight: 700;
+        }
+
+        /* Interactive Trivia Game */
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid rgba(0, 210, 255, 0.35);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-progress {
+            height: 6px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .quiz-progress-bar {
+            height: 100%;
+            width: 20%;
+            background: var(--primary-gradient);
+            transition: width 0.4s ease;
+        }
+
+        .quiz-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .quiz-question-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.35;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .quiz-opt-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            padding: 16px 20px;
+            border-radius: var(--radius-md);
+            color: white;
+            font-size: 0.98rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: inherit;
+        }
+
+        .quiz-opt-btn:hover:not(:disabled) {
+            background: rgba(0, 180, 216, 0.15);
+            border-color: var(--primary);
+            transform: translateX(6px);
+        }
+
+        .quiz-opt-btn.correct {
+            background: rgba(16, 185, 129, 0.25) !important;
+            border-color: var(--accent-green) !important;
+            color: #34d399 !important;
+        }
+
+        .quiz-opt-btn.incorrect {
+            background: rgba(239, 68, 68, 0.25) !important;
+            border-color: #ef4444 !important;
+            color: #f87171 !important;
+        }
+
+        .quiz-feedback {
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        .quiz-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .quiz-result-view {
+            text-align: center;
+            padding: 30px 10px;
+            display: none;
+        }
+
+        .quiz-result-trophy {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 16px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Records Table */
+        .records-table-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .records-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .records-table th {
+            background: rgba(20, 30, 60, 0.9);
+            padding: 18px 24px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-glow);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .records-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.95rem;
+        }
+
+        .records-table tr:hover td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .badge-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: rgba(0, 180, 216, 0.15);
+            color: var(--primary-glow);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 50px 0 30px;
+            background: rgba(4, 7, 16, 0.95);
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 15px;
+            max-width: 400px;
+            font-size: 0.92rem;
+        }
+
+        .footer-col h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-glow);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Confetti Canvas */
+        #confettiCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-description {
+                max-width: 100%;
+            }
+            .format-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .kings-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .stats-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+            .final-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .final-perks {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            h1.hero-title {
+                font-size: 2.4rem;
+            }
+            .kings-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .format-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-strip {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .quiz-container {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header id="mainHeader">
+        <div class="container navbar">
+            <a href="#" class="brand">
+                <div class="brand-logo-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">CONMEBOL Sudamericana</span>
+                    <span class="brand-subtitle">La Gran Conquista</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#historia"><i class="fa-solid fa-book-open"></i> Historia</a></li>
+                <li><a href="#palmares"><i class="fa-solid fa-award"></i> Palmarés</a></li>
+                <li><a href="#formato"><i class="fa-solid fa-diagram-project"></i> Formato</a></li>
+                <li><a href="#records"><i class="fa-solid fa-chart-line"></i> Récords</a></li>
+                <li><a href="#hazañas"><i class="fa-solid fa-fire"></i> Momentos</a></li>
+                <li><a href="#trivia" class="nav-cta"><i class="fa-solid fa-gamepad"></i> Jugar Trivia</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-tag">
+                        <i class="fa-solid fa-star"></i> Torneo Continental de Clubes
+                    </div>
+                    <h1 class="hero-title">
+                        Pasión, Gloria y <br>
+                        <span class="highlight">La Gran Conquista</span>
+                    </h1>
+                    <p class="hero-description">
+                        La <strong>Copa Sudamericana</strong> es el segundo torneo de clubes más prestigioso de América del Sur, organizado por la <strong>CONMEBOL</strong> desde el año 2002. Famosa por sus batallas épicas, finales inolvidables y campeones consagrados en la gloria continental.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#palmares" class="btn btn-primary">
+                            <i class="fa-solid fa-trophy"></i> Ver Campeones Históricos
+                        </a>
+                        <a href="#trivia" class="btn btn-secondary">
+                            <i class="fa-solid fa-circle-question"></i> Probar Trivia
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="copa_sudamericana_banner.jpg" alt="Trofeo oficial de la Copa Sudamericana en la Gran Final" loading="lazy">
+                    </div>
+                    <div class="hero-floating-card">
+                        <div class="floating-stat">
+                            <div class="floating-stat-num" id="heroEditions">23+</div>
+                            <div class="floating-stat-label">Ediciones Disputadas</div>
+                        </div>
+                        <div class="floating-divider"></div>
+                        <div class="floating-stat">
+                            <div class="floating-stat-num">10</div>
+                            <div class="floating-stat-label">Países CONMEBOL</div>
+                        </div>
+                        <div class="floating-divider"></div>
+                        <div class="floating-stat">
+                            <div class="floating-stat-num">5</div>
+                            <div class="floating-stat-label">Bicampeones</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="container">
+                <div class="stats-strip glass">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                        <div class="stat-val">56</div>
+                        <div class="stat-desc">Clubes participan por temporada</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fa-solid fa-medal"></i></div>
+                        <div class="stat-val">17</div>
+                        <div class="stat-desc">Diferentes clubes campeones</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fa-solid fa-futbol"></i></div>
+                        <div class="stat-val">19</div>
+                        <div class="stat-desc">Goles del máximo anotador histórico</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                        <div class="stat-val">$6M+</div>
+                        <div class="stat-desc">Premio económico para el campeón</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reyes de la Copa (Multi-campeones) -->
+        <section id="reyes" class="top-champs-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-crown"></i> Los Reyes de la Copa</span>
+                    <h2 class="section-title">Clubes Más Ganadores (2 Títulos)</h2>
+                    <p class="section-subtitle">Solo cinco instituciones en toda la historia han logrado levantar este prestigioso trofeo en más de una ocasión.</p>
+                </div>
+
+                <div class="kings-grid">
+                    <!-- Boca Juniors -->
+                    <div class="king-card glass">
+                        <div class="king-crown"><i class="fa-solid fa-crown"></i></div>
+                        <div class="king-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="king-name">Boca Juniors</h3>
+                        <p class="king-country">🇦🇷 Argentina</p>
+                        <span class="king-years">2004, 2005</span>
+                        <p style="font-size:0.75rem; color:#94a3b8; margin-top:8px;">Único bicampeón consecutivo en la historia.</p>
+                    </div>
+
+                    <!-- Independiente -->
+                    <div class="king-card glass">
+                        <div class="king-crown"><i class="fa-solid fa-crown"></i></div>
+                        <div class="king-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="king-name">Independiente</h3>
+                        <p class="king-country">🇦🇷 Argentina</p>
+                        <span class="king-years">2010, 2017</span>
+                        <p style="font-size:0.75rem; color:#94a3b8; margin-top:8px;">El Rey de Copas conquistó el Maracaná en 2017.</p>
+                    </div>
+
+                    <!-- Athletico Paranaense -->
+                    <div class="king-card glass">
+                        <div class="king-crown"><i class="fa-solid fa-crown"></i></div>
+                        <div class="king-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="king-name">Athletico Paranaense</h3>
+                        <p class="king-country">🇧🇷 Brasil</p>
+                        <span class="king-years">2018, 2021</span>
+                        <p style="font-size:0.75rem; color:#94a3b8; margin-top:8px;">Máximo dominador brasileño del certamen.</p>
+                    </div>
+
+                    <!-- Independiente del Valle -->
+                    <div class="king-card glass">
+                        <div class="king-crown"><i class="fa-solid fa-crown"></i></div>
+                        <div class="king-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="king-name">Indep. del Valle</h3>
+                        <p class="king-country">🇪🇨 Ecuador</p>
+                        <span class="king-years">2019, 2022</span>
+                        <p style="font-size:0.75rem; color:#94a3b8; margin-top:8px;">El 'Matagigantes' que revolucionó el continente.</p>
+                    </div>
+
+                    <!-- LDU Quito -->
+                    <div class="king-card glass">
+                        <div class="king-crown"><i class="fa-solid fa-crown"></i></div>
+                        <div class="king-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="king-name">LDU Quito</h3>
+                        <p class="king-country">🇪🇨 Ecuador</p>
+                        <span class="king-years">2009, 2023</span>
+                        <p style="font-size:0.75rem; color:#94a3b8; margin-top:8px;">Monarca de Quito consagrado en Montevideo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Palmarés Completo & Filtro Interactivo -->
+        <section id="palmares">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-trophy"></i> Cuadro de Honor</span>
+                    <h2 class="section-title">Palmarés de Campeones</h2>
+                    <p class="section-subtitle">Explora los clubes consagrados desde la edición inaugural de 2002. Filtra por país o busca tu equipo favorito.</p>
+                </div>
+
+                <div class="champions-controls">
+                    <div class="filter-buttons" id="countryFilters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="Argentina">🇦🇷 Argentina</button>
+                        <button class="filter-btn" data-filter="Brasil">🇧🇷 Brasil</button>
+                        <button class="filter-btn" data-filter="Ecuador">🇪🇨 Ecuador</button>
+                        <button class="filter-btn" data-filter="Colombia">🇨🇴 Colombia</button>
+                        <button class="filter-btn" data-filter="Chile">🇨🇱 Chile</button>
+                        <button class="filter-btn" data-filter="México">🇲🇽 México</button>
+                        <button class="filter-btn" data-filter="Perú">🇵🇪 Perú</button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="championSearch" placeholder="Buscar club o año...">
+                    </div>
+                </div>
+
+                <!-- Grid de Campeones generado dinámicamente -->
+                <div class="champions-grid" id="championsGrid">
+                    <!-- Cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Formato de Competición -->
+        <section id="formato">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-sitemap"></i> Sistema de Juego</span>
+                    <h2 class="section-title">¿Cómo se Juega la Sudamericana?</h2>
+                    <p class="section-subtitle">El certamen reúne a 56 equipos en una emocionante ruta que combina fases locales, fase de grupos y duelos de eliminación directa.</p>
+                </div>
+
+                <div class="format-grid">
+                    <div class="format-step glass">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Fase Preliminar</h3>
+                        <p class="step-desc">Clubes de 8 países (Bolivia, Chile, Colombia, Ecuador, Paraguay, Perú, Uruguay y Venezuela) disputan cruces nacionales a partido único para acceder a la fase de grupos.</p>
+                        <span class="step-tag">32 Equipos Nacionales</span>
+                    </div>
+
+                    <div class="format-step glass">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Fase de Grupos</h3>
+                        <p class="step-desc">32 clasificados divididos en 8 grupos de 4 clubes, incluyendo clasificados directos de Argentina y Brasil. Se juega todos contra todos en formato ida y vuelta.</p>
+                        <span class="step-tag">8 Grupos de 4</span>
+                    </div>
+
+                    <div class="format-step glass">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Play-off de Octavos</h3>
+                        <p class="step-desc">Los primeros de grupo avanzan a Octavos. Los segundos de grupo juegan un apasionante repechaje de ida y vuelta contra los terceros de grupo de Copa Libertadores.</p>
+                        <span class="step-tag">Cruce Sudamericana vs Libertadores</span>
+                    </div>
+
+                    <div class="format-step glass">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Final Única</h3>
+                        <p class="step-desc">Tras rondas de Octavos, Cuartos y Semis a ida y vuelta, los dos mejores definen el título a partido único en una sede neutral designada previamente por CONMEBOL.</p>
+                        <span class="step-tag">La Gran Conquista</span>
+                    </div>
+                </div>
+
+                <!-- Beneficios del Campeón -->
+                <div class="final-banner">
+                    <div class="final-info">
+                        <h3><i class="fa-solid fa-gift"></i> Premios y Beneficios del Campeón</h3>
+                        <p>El campeón de la Copa Sudamericana no solo levanta el icónico trofeo de plata y oro, sino que asegura su pase directo a la <strong>Fase de Grupos de la Copa Libertadores</strong> del año siguiente, disputa la <strong>Recopa Sudamericana</strong> y el <strong>Desafío de Clubes UEFA-CONMEBOL</strong>.</p>
+                    </div>
+                    <div class="final-perks">
+                        <div class="perk-pill">
+                            <i class="fa-solid fa-star"></i> Copa Libertadores
+                        </div>
+                        <div class="perk-pill">
+                            <i class="fa-solid fa-shield-halved"></i> Recopa Sudamericana
+                        </div>
+                        <div class="perk-pill">
+                            <i class="fa-solid fa-globe"></i> Desafío UEFA-CONMEBOL
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Récords y Estadísticas Históricas -->
+        <section id="records">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-chart-simple"></i> Datos Imborrables</span>
+                    <h2 class="section-title">Récords Históricos del Torneo</h2>
+                    <p class="section-subtitle">Goleadores de leyenda, clubes con más partidos y marcas que han dejado huella en el fútbol continental.</p>
+                </div>
+
+                <div class="records-table-container glass">
+                    <table class="records-table">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Nombre / Club</th>
+                                <th>País</th>
+                                <th>Registro</th>
+                                <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge-pill">Máximo Goleador Histórico</span></td>
+                                <td><strong>Hernán Barcos</strong></td>
+                                <td>🇦🇷 Argentina</td>
+                                <td><strong>19 Goles</strong></td>
+                                <td>Anotados con LDU Quito, Palmeiras y Grêmio</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge-pill">Segundo Goleador</span></td>
+                                <td><strong>Bernardo Cuesta</strong></td>
+                                <td>🇦🇷 Argentina</td>
+                                <td><strong>16 Goles</strong></td>
+                                <td>Máximo artillero histórico con FBC Melgar</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge-pill">Récord en 1 Sola Edición</span></td>
+                                <td><strong>Eduardo Vargas</strong></td>
+                                <td>🇨🇱 Chile</td>
+                                <td><strong>11 Goles</strong></td>
+                                <td>Campaña histórica con Universidad de Chile en 2011</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge-pill">Campeón Invicto Récord</span></td>
+                                <td><strong>Universidad de Chile</strong></td>
+                                <td>🇨🇱 Chile</td>
+                                <td><strong>10G - 2E - 0D</strong></td>
+                                <td>Edición 2011: 21 goles a favor y solo 2 recibidos</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge-pill">Único Campeón CONCACAF</span></td>
+                                <td><strong>Pachuca CF</strong></td>
+                                <td>🇲🇽 México</td>
+                                <td><strong>Campeón 2006</strong></td>
+                                <td>Venció a Colo-Colo en el Estadio Nacional de Santiago</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge-pill">Mayor Goleada Histórica</span></td>
+                                <td><strong>Fluminense 10 - 1 Oriente Petrolero</strong></td>
+                                <td>🇧🇷 Brasil</td>
+                                <td><strong>Diferencia +9</strong></td>
+                                <td>Fase de Grupos de la edición 2022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Momentos & Hazañas Legendarias -->
+        <section id="hazañas">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-heart"></i> Hazañas y Mística</span>
+                    <h2 class="section-title">Momentos Inolvidables</h2>
+                    <p class="section-subtitle">Historias que trascendieron el fútbol y conmovieron al mundo entero en los más de 20 años de torneo.</p>
+                </div>
+
+                <div class="stories-grid">
+                    <!-- Cienciano 2003 -->
+                    <div class="story-card glass">
+                        <div>
+                            <span class="story-badge">El Milagro Cusqueño</span>
+                            <h3 class="story-title">Cienciano del Cusco (2003): El Orgullo de los Andes</h3>
+                            <p class="story-excerpt">
+                                Con el histórico lema <em>"Sí se puede"</em>, el club peruano dirigido por Freddy Ternero derribó a gigantes: superó a Santos, Atlético Nacional y en la gran final venció a River Plate en Arequipa con gol de oro de tiro libre de Carlos Lugo jugando con 9 hombres.
+                            </p>
+                        </div>
+                        <div class="story-footer">
+                            <span><i class="fa-solid fa-flag"></i> Primer título intl. para Perú</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Chapecoense 2016 -->
+                    <div class="story-card glass">
+                        <div>
+                            <span class="story-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">Hermandad Eterna</span>
+                            <h3 class="story-title">Chapecoense (2016): Campeones Eternos</h3>
+                            <p class="story-excerpt">
+                                Tras la trágica caída de su vuelo en Medellín en vísperas de la final, el club rival <strong>Atlético Nacional</strong> solicitó a la CONMEBOL proclamar a Chapecoense campeón honorífico del certamen, en una de las muestras de solidaridad y fraternidad más hermosas del deporte.
+                            </p>
+                        </div>
+                        <div class="story-footer">
+                            <span style="color: #34d399;"><i class="fa-solid fa-dove"></i> Campeón en el Cielo</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Pachuca 2006 -->
+                    <div class="story-card glass">
+                        <div>
+                            <span class="story-badge">La Hazaña Mexicana</span>
+                            <h3 class="story-title">Pachuca (2006): La Invasión de Concacaf</h3>
+                            <p class="story-excerpt">
+                                Con estrellas como Miguel Calero, Christian Giménez y Andrés Chitiva, los Tuzos de Pachuca lograron lo que ningún otro club mexicano o de Norteamérica ha conseguido: ganar un certamen oficial de la CONMEBOL, remontando la serie a Colo-Colo en Chile.
+                            </p>
+                        </div>
+                        <div class="story-footer">
+                            <span><i class="fa-solid fa-trophy"></i> Hito único para México</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trivia Interactiva -->
+        <section id="trivia">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge"><i class="fa-solid fa-lightbulb"></i> Pon a Prueba tu Pasión</span>
+                    <h2 class="section-title">Trivia de la Copa Sudamericana</h2>
+                    <p class="section-subtitle">¿Cuánto conoces sobre la Gran Conquista? Responde las 5 preguntas y conviértete en el campeón del conocimiento continental.</p>
+                </div>
+
+                <div class="quiz-container glass" id="quizBox">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                    </div>
+
+                    <div id="quizQuestionView">
+                        <div class="quiz-meta">
+                            <span id="quizCounter"><i class="fa-solid fa-circle-question"></i> Pregunta 1 de 5</span>
+                            <span id="quizScoreDisplay"><i class="fa-solid fa-star"></i> Puntos: 0</span>
+                        </div>
+
+                        <h3 class="quiz-question-title" id="quizQuestionText">Cargando pregunta...</h3>
+
+                        <div class="quiz-options" id="quizOptionsContainer">
+                            <!-- Options injected here -->
+                        </div>
+
+                        <div class="quiz-feedback" id="quizFeedback"></div>
+
+                        <div class="quiz-actions">
+                            <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">
+                                Siguiente Pregunta <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Resultado Final del Quiz -->
+                    <div class="quiz-result-view" id="quizResultView">
+                        <div class="quiz-result-trophy">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 style="font-family:'Outfit', sans-serif; font-size:2rem; margin-bottom:10px;" id="quizResultTitle">¡Felicitaciones!</h3>
+                        <p style="color:var(--text-muted); font-size:1.1rem; margin-bottom:20px;" id="quizResultDesc">Completaste la trivia oficial.</p>
+                        <div style="font-size: 2.2rem; font-weight:800; color:var(--gold); margin-bottom: 25px;" id="quizFinalScore">5 / 5</div>
+                        <button class="btn btn-primary" id="restartQuizBtn">
+                            <i class="fa-solid fa-rotate-right"></i> Volver a Jugar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <div class="brand-logo-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-title">CONMEBOL Sudamericana</span>
+                            <span class="brand-subtitle">La Gran Conquista</span>
+                        </div>
+                    </div>
+                    <p>
+                        Portal informativo y tributo digital a la Copa Sudamericana. El certamen donde la garra, el talento y la emoción unen a todo un continente bajo una misma pasión.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Accesos Rápidos</h4>
+                    <ul>
+                        <li><a href="#historia">Historia del Torneo</a></li>
+                        <li><a href="#palmares">Tabla de Campeones</a></li>
+                        <li><a href="#formato">Sistema y Reglas</a></li>
+                        <li><a href="#records">Estadísticas y Goles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Confederación</h4>
+                    <ul>
+                        <li><a href="https://www.conmebol.com" target="_blank" rel="noopener">Sitio Oficial CONMEBOL</a></li>
+                        <li><a href="#hazañas">Momentos Dorados</a></li>
+                        <li><a href="#trivia">Juego de Trivia</a></li>
+                        <li><a href="#reyes">Clubes Bicampeones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CONMEBOL Sudamericana Fan Page. Desarrollado con pasión para los amantes del fútbol sudamericano.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Effects using Web Audio API (Synthesized) -->
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            const now = audioCtx.currentTime;
+
+            if (type === 'click') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(440, now);
+                osc.frequency.exponentialRampToValueAtTime(880, now + 0.08);
+                gain.gain.setValueAtTime(0.1, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+                osc.start(now);
+                osc.stop(now + 0.08);
+            } else if (type === 'correct') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(523.25, now); // C5
+                osc.frequency.setValueAtTime(659.25, now + 0.08); // E5
+                osc.frequency.setValueAtTime(783.99, now + 0.16); // G5
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+                osc.start(now);
+                osc.stop(now + 0.35);
+            } else if (type === 'wrong') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(220, now);
+                osc.frequency.linearRampToValueAtTime(140, now + 0.2);
+                gain.gain.setValueAtTime(0.12, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+                osc.start(now);
+                osc.stop(now + 0.2);
+            }
+        }
+    </script>
+
+    <!-- Data & Interactive Logic -->
+    <script>
+        // Historial completo de Campeones
+        const championsData = [
+            { year: 2024, champion: "Racing Club", country: "Argentina", flag: "🇦🇷", runnerUp: "Cruzeiro (BRA)", score: "3 - 1", multi: false },
+            { year: 2023, champion: "LDU Quito", country: "Ecuador", flag: "🇪🇨", runnerUp: "Fortaleza (BRA)", score: "1 - 1 (4-3 pen.)", multi: true, note: "2º Título" },
+            { year: 2022, champion: "Independiente del Valle", country: "Ecuador", flag: "🇪🇨", runnerUp: "São Paulo (BRA)", score: "2 - 0", multi: true, note: "2º Título" },
+            { year: 2021, champion: "Athletico Paranaense", country: "Brasil", flag: "🇧🇷", runnerUp: "Red Bull Bragantino (BRA)", score: "1 - 0", multi: true, note: "2º Título" },
+            { year: 2020, champion: "Defensa y Justicia", country: "Argentina", flag: "🇦🇷", runnerUp: "Lanús (ARG)", score: "3 - 0", multi: false },
+            { year: 2019, champion: "Independiente del Valle", country: "Ecuador", flag: "🇪🇨", runnerUp: "Colón (ARG)", score: "3 - 1", multi: true, note: "1er Título" },
+            { year: 2018, champion: "Athletico Paranaense", country: "Brasil", flag: "🇧🇷", runnerUp: "Junior de Barranquilla (COL)", score: "1 - 1 (4-3 pen.)", multi: true, note: "1er Título" },
+            { year: 2017, champion: "Independiente", country: "Argentina", flag: "🇦🇷", runnerUp: "Flamengo (BRA)", score: "2 - 1 / 1 - 1", multi: true, note: "2º Título" },
+            { year: 2016, champion: "Chapecoense", country: "Brasil", flag: "🇧🇷", runnerUp: "Atlético Nacional (COL)", score: "Homenaje y Título Honorífico", multi: false },
+            { year: 2015, champion: "Santa Fe", country: "Colombia", flag: "🇨🇴", runnerUp: "Huracán (ARG)", score: "0 - 0 (3-1 pen.)", multi: false },
+            { year: 2014, champion: "River Plate", country: "Argentina", flag: "🇦🇷", runnerUp: "Atlético Nacional (COL)", score: "1 - 1 / 2 - 0", multi: false },
+            { year: 2013, champion: "Lanús", country: "Argentina", flag: "🇦🇷", runnerUp: "Ponte Preta (BRA)", score: "1 - 1 / 2 - 0", multi: false },
+            { year: 2012, champion: "São Paulo", country: "Brasil", flag: "🇧🇷", runnerUp: "Tigre (ARG)", score: "0 - 0 / 2 - 0", multi: false },
+            { year: 2011, champion: "Universidad de Chile", country: "Chile", flag: "🇨🇱", runnerUp: "LDU Quito (ECU)", score: "1 - 0 / 3 - 0", multi: false, note: "Campeón Invicto" },
+            { year: 2010, champion: "Independiente", country: "Argentina", flag: "🇦🇷", runnerUp: "Goiás (BRA)", score: "0 - 2 / 3 - 1 (5-3 pen.)", multi: true, note: "1er Título" },
+            { year: 2009, champion: "LDU Quito", country: "Ecuador", flag: "🇪🇨", runnerUp: "Fluminense (BRA)", score: "5 - 1 / 0 - 3", multi: true, note: "1er Título" },
+            { year: 2008, champion: "Internacional", country: "Brasil", flag: "🇧🇷", runnerUp: "Estudiantes (ARG)", score: "1 - 0 / 1 - 1", multi: false },
+            { year: 2007, champion: "Arsenal de Sarandí", country: "Argentina", flag: "🇦🇷", runnerUp: "América (MEX)", score: "3 - 2 / 1 - 2", multi: false },
+            { year: 2006, champion: "Pachuca", country: "México", flag: "🇲🇽", runnerUp: "Colo-Colo (CHI)", score: "1 - 1 / 2 - 1", multi: false, note: "Único de Concacaf" },
+            { year: 2005, champion: "Boca Juniors", country: "Argentina", flag: "🇦🇷", runnerUp: "Pumas UNAM (MEX)", score: "1 - 1 (4-3 pen.)", multi: true, note: "Bicampeón Consecutivo" },
+            { year: 2004, champion: "Boca Juniors", country: "Argentina", flag: "🇦🇷", runnerUp: "Bolívar (BOL)", score: "0 - 1 / 2 - 0", multi: true, note: "1er Título" },
+            { year: 2003, champion: "Cienciano", country: "Perú", flag: "🇵🇪", runnerUp: "River Plate (ARG)", score: "3 - 3 / 1 - 0", multi: false, note: "Hazaña Cusqueña" },
+            { year: 2002, champion: "San Lorenzo", country: "Argentina", flag: "🇦🇷", runnerUp: "Atlético Nacional (COL)", score: "4 - 0 / 0 - 0", multi: false, note: "1er Campeón de la Historia" }
+        ];
+
+        // Render Champions Grid
+        const championsGrid = document.getElementById('championsGrid');
+        const championSearch = document.getElementById('championSearch');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        let activeFilter = 'all';
+        let searchQuery = '';
+
+        function renderChampions() {
+            championsGrid.innerHTML = '';
+            
+            const filtered = championsData.filter(item => {
+                const matchesFilter = (activeFilter === 'all') || (item.country.toLowerCase() === activeFilter.toLowerCase());
+                const query = searchQuery.toLowerCase();
+                const matchesSearch = item.champion.toLowerCase().includes(query) || 
+                                      item.year.toString().includes(query) ||
+                                      item.country.toLowerCase().includes(query) ||
+                                      item.runnerUp.toLowerCase().includes(query);
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                championsGrid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted);">
+                        <i class="fa-solid fa-face-frown" style="font-size: 2.5rem; margin-bottom: 12px; color: var(--gold);"></i>
+                        <p style="font-size: 1.1rem;">No se encontraron campeones con ese criterio.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = `champion-card glass ${item.multi ? 'multi-champ' : ''}`;
+                
+                card.innerHTML = `
+                    <div>
+                        <div class="champion-top">
+                            <span class="champion-year-badge">${item.year}</span>
+                            <span class="champion-country">${item.flag}</span>
+                        </div>
+                        <h4 class="champion-name">${item.champion}</h4>
+                        <div class="champion-runner-up">Subcampeón: <strong>${item.runnerUp}</strong></div>
+                        <div class="champion-score">Resultado: ${item.score}</div>
+                    </div>
+                    ${item.note ? `
+                        <div class="trophies-badge">
+                            <i class="fa-solid fa-star"></i>
+                            <span>${item.note}</span>
+                        </div>
+                    ` : ''}
+                `;
+                championsGrid.appendChild(card);
+            });
+        }
+
+        // Filter events
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                playSound('click');
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeFilter = btn.getAttribute('data-filter');
+                renderChampions();
+            });
+        });
+
+        // Search event
+        championSearch.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            renderChampions();
+        });
+
+        // Trivia Data
+        const triviaQuestions = [
+            {
+                question: "¿Qué club fue el primer campeón de la historia de la Copa Sudamericana en 2002?",
+                options: ["Boca Juniors", "San Lorenzo de Almagro", "Cienciano", "River Plate"],
+                correct: 1,
+                explanation: "¡Correcto! San Lorenzo ganó la primera edición en 2002 derrotando en la final a Atlético Nacional con global de 4-0."
+            },
+            {
+                question: "¿Cuál es el único equipo bicampeón de manera consecutiva (2004 y 2005)?",
+                options: ["Athletico Paranaense", "LDU Quito", "Boca Juniors", "Independiente"],
+                correct: 2,
+                explanation: "¡Exacto! Boca Juniors es el único club en ganar el torneo en dos años seguidos (2004 ante Bolívar y 2005 ante Pumas)."
+            },
+            {
+                question: "¿Qué club de la CONCACAF logró consagrarse campeón de la Copa Sudamericana en 2006?",
+                options: ["Club América", "Chivas de Guadalajara", "Pachuca", "Pumas UNAM"],
+                correct: 2,
+                explanation: "¡Gran acierto! Pachuca de México derrotó a Colo-Colo en el Estadio Nacional de Santiago para alzar la copa continental."
+            },
+            {
+                question: "¿Quién ostenta el récord de más goles anotados en una sola edición (11 goles en 2011)?",
+                options: ["Eduardo Vargas", "Hernán Barcos", "Humberto Suazo", "Miller Bolaños"],
+                correct: 0,
+                explanation: "¡Impresionante! El chileno Eduardo Vargas marcó 11 tantos con Universidad de Chile en la inolvidable campaña invicta de 2011."
+            },
+            {
+                question: "¿Qué club peruano consiguió la histórica gesta de ganarle la final a River Plate en 2003?",
+                options: ["Alianza Lima", "Universitario de Deportes", "Cienciano", "Sporting Cristal"],
+                correct: 2,
+                explanation: "¡Magistral! Cienciano del Cusco hizo historia bajo el mando de Freddy Ternero venciendo a River en Arequipa 1-0 tras igualar 3-3 en Buenos Aires."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let answered = false;
+
+        const quizQuestionText = document.getElementById('quizQuestionText');
+        const quizOptionsContainer = document.getElementById('quizOptionsContainer');
+        const quizProgressBar = document.getElementById('quizProgressBar');
+        const quizCounter = document.getElementById('quizCounter');
+        const quizScoreDisplay = document.getElementById('quizScoreDisplay');
+        const quizFeedback = document.getElementById('quizFeedback');
+        const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+        const quizQuestionView = document.getElementById('quizQuestionView');
+        const quizResultView = document.getElementById('quizResultView');
+        const quizFinalScore = document.getElementById('quizFinalScore');
+        const restartQuizBtn = document.getElementById('restartQuizBtn');
+
+        function loadQuestion() {
+            answered = false;
+            const currentQ = triviaQuestions[currentQuestionIndex];
+            
+            quizProgressBar.style.width = `${((currentQuestionIndex + 1) / triviaQuestions.length) * 100}%`;
+            quizCounter.innerHTML = `<i class="fa-solid fa-circle-question"></i> Pregunta ${currentQuestionIndex + 1} de ${triviaQuestions.length}`;
+            quizScoreDisplay.innerHTML = `<i class="fa-solid fa-star"></i> Puntos: ${score}`;
+            quizQuestionText.textContent = currentQ.question;
+            
+            quizFeedback.style.display = 'none';
+            nextQuestionBtn.style.display = 'none';
+            quizOptionsContainer.innerHTML = '';
+
+            currentQ.options.forEach((optText, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-opt-btn';
+                btn.innerHTML = `
+                    <span>${optText}</span>
+                    <i class="fa-regular fa-circle"></i>
+                `;
+                btn.addEventListener('click', () => handleOptionClick(index, btn));
+                quizOptionsContainer.appendChild(btn);
+            });
+        }
+
+        function handleOptionClick(selectedIndex, button) {
+            if (answered) return;
+            answered = true;
+
+            const currentQ = triviaQuestions[currentQuestionIndex];
+            const allButtons = quizOptionsContainer.querySelectorAll('.quiz-opt-btn');
+
+            allButtons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === currentQ.correct) {
+                    btn.classList.add('correct');
+                    btn.querySelector('i').className = 'fa-solid fa-circle-check';
+                }
+            });
+
+            if (selectedIndex === currentQ.correct) {
+                playSound('correct');
+                score++;
+                quizScoreDisplay.innerHTML = `<i class="fa-solid fa-star"></i> Puntos: ${score}`;
+                quizFeedback.style.display = 'block';
+                quizFeedback.style.background = 'rgba(16, 185, 129, 0.2)';
+                quizFeedback.style.color = '#34d399';
+                quizFeedback.innerHTML = `<i class="fa-solid fa-check"></i> ${currentQ.explanation}`;
+            } else {
+                playSound('wrong');
+                button.classList.add('incorrect');
+                button.querySelector('i').className = 'fa-solid fa-circle-xmark';
+                quizFeedback.style.display = 'block';
+                quizFeedback.style.background = 'rgba(239, 68, 68, 0.2)';
+                quizFeedback.style.color = '#f87171';
+                quizFeedback.innerHTML = `<i class="fa-solid fa-xmark"></i> Incorrecto. ${currentQ.explanation}`;
+            }
+
+            nextQuestionBtn.style.display = 'inline-flex';
+        }
+
+        nextQuestionBtn.addEventListener('click', () => {
+            playSound('click');
+            currentQuestionIndex++;
+            if (currentQuestionIndex < triviaQuestions.length) {
+                loadQuestion();
+            } else {
+                showQuizResult();
+            }
+        });
+
+        function showQuizResult() {
+            quizQuestionView.style.display = 'none';
+            quizResultView.style.display = 'block';
+            quizFinalScore.textContent = `${score} / ${triviaQuestions.length}`;
+            
+            const resultTitle = document.getElementById('quizResultTitle');
+            const resultDesc = document.getElementById('quizResultDesc');
+
+            if (score === triviaQuestions.length) {
+                resultTitle.textContent = "🏆 ¡Campeón Absoluto de la Sudamericana!";
+                resultDesc.textContent = "¡Increíble! Dominas al 100% la historia de la Gran Conquista. Eres un verdadero conocedor continental.";
+                triggerConfetti();
+                playSound('correct');
+            } else if (score >= 3) {
+                resultTitle.textContent = "🥈 ¡Gran Actuación de Finalista!";
+                resultDesc.textContent = "Tienes un conocimiento muy sólido del torneo más apasionante de Sudamérica.";
+            } else {
+                resultTitle.textContent = "⚽ Buen Intento";
+                resultDesc.textContent = "Sigue explorando la página y repasa el palmarés para lograr la copa en el próximo intento.";
+            }
+        }
+
+        restartQuizBtn.addEventListener('click', () => {
+            playSound('click');
+            currentQuestionIndex = 0;
+            score = 0;
+            quizResultView.style.display = 'none';
+            quizQuestionView.style.display = 'block';
+            loadQuestion();
+        });
+
+        // Simple Confetti Animation
+        function triggerConfetti() {
+            const canvas = document.getElementById('confettiCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const pieces = [];
+            const colors = ['#00d2ff', '#ffd700', '#ffffff', '#0072ff', '#ff8800'];
+
+            for (let i = 0; i < 120; i++) {
+                pieces.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * -canvas.height,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    speed: Math.random() * 5 + 3,
+                    rotation: Math.random() * 360,
+                    rotationSpeed: Math.random() * 6 - 3
+                });
+            }
+
+            let animationFrame;
+            let timer = 0;
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                pieces.forEach(p => {
+                    p.y += p.speed;
+                    p.rotation += p.rotationSpeed;
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate((p.rotation * Math.PI) / 180);
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+                    ctx.restore();
+                });
+
+                timer++;
+                if (timer < 200) {
+                    animationFrame = requestAnimationFrame(animate);
+                } else {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    cancelAnimationFrame(animationFrame);
+                }
+            }
+
+            animate();
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderChampions();
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>

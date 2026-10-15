@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa con la última información de Minecraft: Actualización 1.21 Tricky Trials, el nuevo bioma El Jardín Pálido, El Crujiente, el Mazo, el Fabricador, los Sacos y la película 2025.">
+    <title>Minecraft: La Nueva Era | Tricky Trials & El Jardín Pálido</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Minecraft Stylesheet -->
+    <link rel="stylesheet" href="estilo2antigravity.css">
+</head>
+<body>
+
+    <!-- Canvas para Partículas de Victoria / Nivel de XP -->
+    <canvas id="mcCanvas" style="position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:9999;"></canvas>
+
+    <!-- Header / Navbar Minecraft -->
+    <header class="mc-header">
+        <div class="container mc-nav">
+            <a href="#" class="brand-mc">
+                <div class="pixel-block-icon">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="brand-titles">
+                    <span class="brand-logo-text">MINECRAFT</span>
+                    <span class="brand-ver">Última Info & Novedades</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#trials"><i class="fa-solid fa-dungeon"></i> 1.21 Tricky Trials</a></li>
+                <li><a href="#palegarden"><i class="fa-solid fa-tree"></i> Jardín Pálido</a></li>
+                <li><a href="#mobs"><i class="fa-solid fa-skull"></i> Nuevos Mobs</a></li>
+                <li><a href="#crafting"><i class="fa-solid fa-hammer"></i> Mesa de Crafteo</a></li>
+                <li><a href="#movie"><i class="fa-solid fa-film"></i> Película</a></li>
+                <li><a href="#trivia"><i class="fa-solid fa-trophy"></i> Desafío XP</a></li>
+            </ul>
+
+            <div class="nav-hud-xp" id="xpLevelDisplay">
+                <i class="fa-solid fa-bolt"></i> NIVEL <span id="currentXpLevel">30</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-mc">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <i class="fa-solid fa-sparkles"></i> Actualizaciones 1.21 & Game Drops
+                    </div>
+                    <h1 class="hero-title">
+                        LA NUEVA ERA DE <br>
+                        <span class="title-glow-copper">TRICKY TRIALS</span> Y <br>
+                        <span class="title-glow-emerald">EL JARDÍN PÁLIDO</span>
+                    </h1>
+                    <p class="hero-p">
+                        Minecraft entra en su época más emocionante con las <strong>Cámaras del Juicio</strong>, el revolucionario <strong>Fabricador (Crafter)</strong> de Redstone, el devastador <strong>Mazo</strong> y el misterioso bosque del <strong>Jardín Pálido</strong> vigilado por <strong>El Crujiente</strong>.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#crafting" class="btn-mc btn-mc-primary">
+                            <i class="fa-solid fa-hammer"></i> Probar Crafteos 1.21
+                        </a>
+                        <a href="#palegarden" class="btn-mc btn-mc-secondary">
+                            <i class="fa-solid fa-eye-slash"></i> Ver El Crujiente
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-card">
+                    <div class="hero-banner-frame">
+                        <img src="minecraft_banner.jpg" alt="Minecraft 1.21 Tricky Trials con la Brisa y Cámaras del Juicio" loading="lazy">
+                    </div>
+                    <!-- Minecraft HUD Floating Bar -->
+                    <div class="mc-hud-box">
+                        <div class="hud-hearts" title="Salud del Jugador">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="hud-xp-bar-wrapper">
+                            <div class="hud-xp-line">
+                                <div class="hud-xp-fill"></div>
+                            </div>
+                            <div class="hud-xp-level">BARRA DE EXPERIENCIA</div>
+                        </div>
+                        <div class="hud-hunger" title="Barra de Hambre">
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="container">
+                <div class="mc-stats-grid">
+                    <div class="mc-card mc-stat-card">
+                        <div class="mc-stat-icon copper"><i class="fa-solid fa-cubes-stacked"></i></div>
+                        <div class="mc-stat-val">+300M</div>
+                        <div class="mc-stat-lbl">Copias vendidas (Juego #1 del mundo)</div>
+                    </div>
+                    <div class="mc-card mc-stat-card">
+                        <div class="mc-stat-icon"><i class="fa-solid fa-gear"></i></div>
+                        <div class="mc-stat-val">Autocraft</div>
+                        <div class="mc-stat-lbl">Fabricador 100% automatizado con Redstone</div>
+                    </div>
+                    <div class="mc-card mc-stat-card">
+                        <div class="mc-stat-icon pale"><i class="fa-solid fa-ghost"></i></div>
+                        <div class="mc-stat-val">El Crujiente</div>
+                        <div class="mc-stat-lbl">Nuevo enemigo que solo ataca si no lo miras</div>
+                    </div>
+                    <div class="mc-card mc-stat-card">
+                        <div class="mc-stat-icon amethyst"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="mc-stat-val">Hardcore</div>
+                        <div class="mc-stat-lbl">Modo Extremo disponible en Bedrock</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tricky Trials 1.21 Features Section -->
+        <section id="trials" class="mc-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge-mc copper"><i class="fa-solid fa-dungeon"></i> Actualización 1.21</span>
+                    <h2 class="section-title-mc">Las Grandes Novedades de Tricky Trials</h2>
+                    <p class="section-sub-mc">Una actualización enfocada en la aventura multijugador, mazmorras subterráneas procedurales y automatización técnica de redstone.</p>
+                </div>
+
+                <div class="features-grid-121">
+                    <!-- Feature 1: Cámaras del Juicio -->
+                    <div class="mc-card mc-card-copper feature-box">
+                        <div class="feature-box-top">
+                            <span class="feature-pill pill-copper"><i class="fa-solid fa-shield"></i> Estructura</span>
+                            <h3 class="feature-h3">Cámaras del Juicio (Trial Chambers)</h3>
+                            <p class="feature-desc">
+                                Gigantescas estructuras subterráneas construidas con bloques de cobre y toba. Cuentan con <strong>Generadores del Juicio (Trial Spawners)</strong> que adaptan la cantidad de enemigos al número de jugadores presentes.
+                            </p>
+                            <ul class="feature-points">
+                                <li><i class="fa-solid fa-check"></i> Recompensas exclusivas en Bóvedas (Vaults)</li>
+                                <li><i class="fa-solid fa-check"></i> Llaves del Juicio (Trial Keys) para abrir botines</li>
+                                <li><i class="fa-solid fa-check"></i> Trampas de flechas, agua y fuego</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: El Mazo -->
+                    <div class="mc-card feature-box">
+                        <div class="feature-box-top">
+                            <span class="feature-pill pill-emerald"><i class="fa-solid fa-gavel"></i> Nueva Arma</span>
+                            <h3 class="feature-h3">El Mazo (The Mace)</h3>
+                            <p class="feature-desc">
+                                La primera arma cuerpo a cuerpo nueva en años. Se craftea combinando una <em>Vara de Brisa</em> con un <em>Núcleo Pesado</em>. Si golpeas a un enemigo mientras caes, <strong>se anula todo el daño de caída</strong> y se multiplica exponencialmente el impacto.
+                            </p>
+                            <ul class="feature-points">
+                                <li><i class="fa-solid fa-bolt"></i> Encantamiento <strong>Densidad</strong>: más daño por bloque de caída</li>
+                                <li><i class="fa-solid fa-wind"></i> Encantamiento <strong>Ráfaga de Viento</strong>: te propulsa al golpear</li>
+                                <li><i class="fa-solid fa-shield-slash"></i> Encantamiento <strong>Brecha</strong>: ignora la armadura enemiga</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: El Fabricador (Crafter) -->
+                    <div class="mc-card feature-box">
+                        <div class="feature-box-top">
+                            <span class="feature-pill pill-amethyst"><i class="fa-solid fa-cogs"></i> Revolución Técnica</span>
+                            <h3 class="feature-h3">El Fabricador (The Crafter)</h3>
+                            <p class="feature-desc">
+                                El añadido más pedido por la comunidad técnica en 15 años: una mesa de crafteo capaz de fabricar objetos automáticamente al recibir un pulso de Redstone. Permite bloquear ranuras específicas para automatizar cualquier receta.
+                            </p>
+                            <ul class="feature-points">
+                                <li><i class="fa-solid fa-check"></i> Automatización de cohetes, armaduras y bloques</li>
+                                <li><i class="fa-solid fa-check"></i> Compatible con tolvas (hoppers) y soltadores</li>
+                                <li><i class="fa-solid fa-check"></i> Control total mediante comparadores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- El Jardín Pálido & El Crujiente (Latest Game Drop) -->
+        <section id="palegarden" class="mc-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge-mc pale"><i class="fa-solid fa-moon"></i> Último Gran Anuncio</span>
+                    <h2 class="section-title-mc">El Jardín Pálido y El Crujiente</h2>
+                    <p class="section-sub-mc">El nuevo bioma silencioso y desaturado donde el sonido de tus pasos es lo único que escucharás... hasta que caiga la noche.</p>
+                </div>
+
+                <div class="pale-garden-spotlight mc-card-pale">
+                    <div class="pale-garden-info">
+                        <h3>Un Bioma Sin Vida Animal</h3>
+                        <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:20px;">
+                            El <strong>Jardín Pálido (The Pale Garden)</strong> presenta una atmósfera escalofriante inspirada en bosques otoñales embrujados. Aquí no nacen cerdos, vacas ni ovejas. La madera de <strong>Roble Pálido</strong> tiene un tono blanco plateado impecable para construir, acompañado por <strong>Musgo Pálido</strong> y enredaderas colgantes.
+                        </p>
+                        <div class="creaking-stat-tag">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Monstruo Inmortal a Armas Convencionales
+                        </div>
+                    </div>
+
+                    <div class="creaking-mechanic-card">
+                        <h4><i class="fa-solid fa-eye"></i> MECÁNICA DE 'EL CRUJIENTE'</h4>
+                        <p>
+                            <strong>1. Contacto Visual:</strong> Mientras mantengas la mirada sobre El Crujiente, se congelará por completo en su sitio como un árbol inanimado.
+                        </p>
+                        <p>
+                            <strong>2. El Ataque Silencioso:</strong> En el instante en que apartas la vista o parpadeas, avanzará a toda velocidad para golpearte.
+                        </p>
+                        <p>
+                            <strong>3. El Corazón del Crujiente:</strong> ¡Golpearlo con espadas no sirve de nada! Para vencerlo, debes rastrear las partículas de madera hasta el árbol cercano que alberga su <em>Corazón</em> y destruirlo con un hacha.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobs Grid -->
+        <section id="mobs" class="mc-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge-mc"><i class="fa-solid fa-spaghetti-monster-flying"></i> Bestiario</span>
+                    <h2 class="section-title-mc">Los Nuevos Mobs de Minecraft</h2>
+                    <p class="section-sub-mc">Conoce las características, comportamientos y recompensas de las criaturas añadidas en las últimas versiones.</p>
+                </div>
+
+                <div class="mobs-grid">
+                    <!-- The Breeze -->
+                    <div class="mc-card mob-card">
+                        <div>
+                            <div class="mob-avatar-box mob-breeze">
+                                <i class="fa-solid fa-wind"></i>
+                            </div>
+                            <h3 class="mob-name">La Brisa (The Breeze)</h3>
+                            <div class="mob-type-badge">Hostil • Cámaras del Juicio</div>
+                            <p class="mob-desc">
+                                Salta ágilmente alrededor de los jugadores y dispara ráfagas de viento concentradas que infligen daño de empuje y activan palancas o puertas.
+                            </p>
+                        </div>
+                        <div class="mob-drops">
+                            <strong>Drop:</strong> Varas de Brisa (Breeze Rods) y Cargas de Viento
+                        </div>
+                    </div>
+
+                    <!-- The Bogged -->
+                    <div class="mc-card mob-card">
+                        <div>
+                            <div class="mob-avatar-box mob-bogged">
+                                <i class="fa-solid fa-skull-crossbones"></i>
+                            </div>
+                            <h3 class="mob-name">El Ciénaga (The Bogged)</h3>
+                            <div class="mob-type-badge">Hostil • Pantanos y Cámaras</div>
+                            <p class="mob-desc">
+                                Una variante del esqueleto cubierta de musgo y setas. Dispara flechas envenenadas a un ritmo más lento pero sumamente letal para aventureros.
+                            </p>
+                        </div>
+                        <div class="mob-drops">
+                            <strong>Drop:</strong> Flechas venenosas, huesos y setas
+                        </div>
+                    </div>
+
+                    <!-- The Creaking -->
+                    <div class="mc-card mob-card">
+                        <div>
+                            <div class="mob-avatar-box mob-creaking">
+                                <i class="fa-solid fa-eye-slash"></i>
+                            </div>
+                            <h3 class="mob-name">El Crujiente (The Creaking)</h3>
+                            <div class="mob-type-badge">Hostil • Jardín Pálido</div>
+                            <p class="mob-desc">
+                                Ser místico de madera que solo se desplaza cuando no es observado directamente. Conectado de forma simbiótica con su bloque de corazón.
+                            </p>
+                        </div>
+                        <div class="mob-drops">
+                            <strong>Drop:</strong> Gotas de Resina y Bloques de Resina
+                        </div>
+                    </div>
+
+                    <!-- El Armadillo -->
+                    <div class="mc-card mob-card">
+                        <div>
+                            <div class="mob-avatar-box mob-armadillo">
+                                <i class="fa-solid fa-shield-cat"></i>
+                            </div>
+                            <h3 class="mob-name">El Armadillo</h3>
+                            <div class="mob-type-badge">Pacífico • Sabanas y Badlands</div>
+                            <p class="mob-desc">
+                                Criatura pacífica que se enrolla en su caparazón cuando detecta amenazas (como no-muertos). Deja caer escudos para proteger a tu perro.
+                            </p>
+                        </div>
+                        <div class="mob-drops">
+                            <strong>Drop:</strong> Escamas de Armadillo (Armaduras para Lobos)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulador Interactivo de la Mesa de Crafteo -->
+        <section id="crafting" class="mc-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge-mc copper"><i class="fa-solid fa-hammer"></i> Laboratorio de Recetas</span>
+                    <h2 class="section-title-mc">Simulador de Crafteos 1.21</h2>
+                    <p class="section-sub-mc">Selecciona un objeto de las nuevas versiones para ver su combinación exacta en la cuadrícula de trabajo de 3x3.</p>
+                </div>
+
+                <div class="crafting-section-box">
+                    <div class="crafting-layout">
+                        <!-- Botones de Recetas -->
+                        <div class="recipes-list" id="recipesList">
+                            <button class="recipe-selector-btn active" data-recipe="mace">
+                                <span><i class="fa-solid fa-gavel"></i> El Mazo (The Mace)</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="recipe-selector-btn" data-recipe="crafter">
+                                <span><i class="fa-solid fa-cogs"></i> El Fabricador (The Crafter)</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="recipe-selector-btn" data-recipe="windcharge">
+                                <span><i class="fa-solid fa-wind"></i> Carga de Viento</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="recipe-selector-btn" data-recipe="bundle">
+                                <span><i class="fa-solid fa-box-archive"></i> Saco (Bundle)</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <button class="recipe-selector-btn" data-recipe="wolfarmor">
+                                <span><i class="fa-solid fa-shield-dog"></i> Armadura de Lobo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Área Visual de la Mesa de Crafteo -->
+                        <div>
+                            <div class="crafting-visual-area">
+                                <div class="grid-3x3" id="craftingGrid3x3">
+                                    <!-- 9 slots populated by JS -->
+                                </div>
+                                <div class="craft-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                                <div class="craft-result-slot" id="craftResultSlot">
+                                    <i class="fa-solid fa-gavel"></i>
+                                </div>
+                            </div>
+                            <div class="craft-info-box" id="craftInfoText">
+                                Selecciona un objeto para ver su utilidad y materiales requeridos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Película Live-Action & 15 Aniversario -->
+        <section id="movie" class="mc-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge-mc"><i class="fa-solid fa-clapperboard"></i> Cultura & Cine</span>
+                    <h2 class="section-title-mc">Una Película de Minecraft & 15 Años</h2>
+                    <p class="section-sub-mc">El fenómeno cultural de Mojang Studios salta a las salas de cine de todo el planeta.</p>
+                </div>
+
+                <div class="movie-anniversary-grid">
+                    <!-- Movie Card -->
+                    <div class="mc-card movie-card">
+                        <span class="movie-tag"><i class="fa-solid fa-film"></i> Estreno en Cines</span>
+                        <h3 style="font-family:var(--font-heading); font-size:1.8rem; margin-bottom:12px; color:#fff;">A Minecraft Movie (2025)</h3>
+                        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin-bottom:16px;">
+                            Dirigida por Jared Hess y producida por Warner Bros. Pictures junto a Mojang Studios. Protagonizada por <strong>Jack Black</strong> interpretando al mítico <strong>Steve</strong> (<em>"I... am Steve!"</em>) y <strong>Jason Momoa</strong> como Garrett "El Hombre de la Basura".
+                        </p>
+                        <p style="color:#cbd5e1; font-size:0.9rem;">
+                            Un grupo de cuatro inadaptados es absorbido por un portal misterioso al Overworld, donde deberán dominar la creación de herramientas y defenderse de Piglins y zombis para volver a casa.
+                        </p>
+                    </div>
+
+                    <!-- 15th Anniversary & Game Drops -->
+                    <div class="mc-card movie-card" style="border-color: rgba(16, 185, 129, 0.4);">
+                        <span class="movie-tag" style="background: rgba(16, 185, 129, 0.2); color: var(--mc-emerald-glow); border-color: rgba(16, 185, 129, 0.4);">
+                            <i class="fa-solid fa-gift"></i> Nuevo Modelo de Actualizaciones
+                        </span>
+                        <h3 style="font-family:var(--font-heading); font-size:1.8rem; margin-bottom:12px; color:#fff;">Game Drops Frecuentes</h3>
+                        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6; margin-bottom:16px;">
+                            Mojang anunció un cambio histórico en el desarrollo de Minecraft tras su 15° aniversario: en lugar de esperar un año entero para una gran actualización masiva, el juego recibirá <strong>Game Drops</strong> más frecuentes a lo largo del año.
+                        </p>
+                        <p style="color:#cbd5e1; font-size:0.9rem;">
+                            Esto garantiza que novedades como el <strong>Jardín Pálido</strong>, los <strong>Sacos (Bundles)</strong> y el <strong>Modo Extremo (Hardcore) en Bedrock</strong> lleguen más rápido a los jugadores en todas las plataformas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desafío Trivia de Minecraft (Gana XP) -->
+        <section id="trivia" class="mc-section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-badge-mc"><i class="fa-solid fa-gamepad"></i> Mini-Juego</span>
+                    <h2 class="section-title-mc">Desafío del Netherite</h2>
+                    <p class="section-sub-mc">Responde las preguntas sobre las últimas actualizaciones para ganar experiencia y coronarte con armadura completa.</p>
+                </div>
+
+                <div class="quiz-mc-box" id="quizMcBox">
+                    <div class="quiz-mc-progress">
+                        <div class="quiz-mc-progress-bar" id="quizMcBar"></div>
+                    </div>
+
+                    <div id="quizQuestionPanel">
+                        <div class="quiz-mc-header">
+                            <span id="quizCounterText">PREGUNTA 1 DE 5</span>
+                            <span id="quizXpPointsText"><i class="fa-solid fa-bolt"></i> +0 XP</span>
+                        </div>
+
+                        <h3 class="quiz-mc-q" id="quizQTitle">Cargando desafío...</h3>
+
+                        <div class="quiz-mc-opts" id="quizOptsContainer">
+                            <!-- Options -->
+                        </div>
+
+                        <div class="quiz-feedback-box" id="quizFeedbackBox"></div>
+
+                        <div style="display:flex; justify-content:flex-end;">
+                            <button id="nextQBtn" class="btn-mc btn-mc-primary" style="display: none;">
+                                Siguiente Pregunta <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Victoria Final -->
+                    <div class="quiz-result-mc" id="quizResultPanel">
+                        <div class="netherite-trophy">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <h3 style="font-family:var(--font-heading); font-size:2.2rem; margin-bottom:10px; color:#fff;" id="resultTitleMc">¡Nivel 100 Alcanzado!</h3>
+                        <p style="color:var(--text-muted); font-size:1.1rem; margin-bottom:20px;" id="resultDescMc">Completaste el Desafío de Netherite con éxito.</p>
+                        <div style="font-family:var(--font-pixel); font-size: 2rem; color:var(--mc-emerald-glow); margin-bottom: 25px;" id="resultScoreMc">5 / 5</div>
+                        <button class="btn-mc btn-mc-primary" id="restartMcQuiz">
+                            <i class="fa-solid fa-rotate-right"></i> Jugar Nuevamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mc-footer">
+        <div class="container">
+            <div class="footer-grid-mc">
+                <div>
+                    <div class="brand-mc">
+                        <div class="pixel-block-icon"><i class="fa-solid fa-cube"></i></div>
+                        <div class="brand-titles">
+                            <span class="brand-logo-text">MINECRAFT</span>
+                            <span class="brand-ver">Guía de Actualizaciones</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Página informativa creada para fans de Minecraft con las últimas novedades de Tricky Trials 1.21, el Jardín Pálido y las actualizaciones más recientes del universo sandbox.
+                    </p>
+                </div>
+                <div class="footer-col-mc">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#trials">1.21 Tricky Trials</a></li>
+                        <li><a href="#palegarden">El Jardín Pálido</a></li>
+                        <li><a href="#mobs">Bestiario de Mobs</a></li>
+                        <li><a href="#crafting">Mesa de Crafteo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-mc">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="https://www.minecraft.net" target="_blank" rel="noopener">Minecraft Oficial</a></li>
+                        <li><a href="#movie">Película Live-Action</a></li>
+                        <li><a href="#trivia">Test de Experiencia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-mc">
+                <p>&copy; 2026 Guía de Minecraft no oficial. Minecraft es una marca registrada de Mojang AB y Microsoft Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Effects using Web Audio API -->
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playMinecraftSound(type) {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            const now = audioCtx.currentTime;
+
+            if (type === 'click') {
+                // Retro block click
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'square';
+                osc.frequency.setValueAtTime(600, now);
+                osc.frequency.exponentialRampToValueAtTime(200, now + 0.05);
+                gain.gain.setValueAtTime(0.08, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.05);
+            } else if (type === 'levelup') {
+                // Minecraft iconic level up chime (bell arpeggio)
+                const notes = [440, 554.37, 659.25, 880];
+                notes.forEach((freq, idx) => {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now + idx * 0.07);
+                    gain.gain.setValueAtTime(0.12, now + idx * 0.07);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.25);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now + idx * 0.07);
+                    osc.stop(now + idx * 0.07 + 0.25);
+                });
+            } else if (type === 'craft') {
+                // Anvil / craft metallic woody clink
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(987.77, now); // B5
+                osc.frequency.exponentialRampToValueAtTime(493.88, now + 0.12);
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.12);
+            } else if (type === 'hit') {
+                // Hurt grunt tone
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(150, now);
+                osc.frequency.linearRampToValueAtTime(70, now + 0.15);
+                gain.gain.setValueAtTime(0.1, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.15);
+            }
+        }
+    </script>
+
+    <!-- Crafting Table & Trivia Script -->
+    <script>
+        // Recipes Database
+        const recipesData = {
+            mace: {
+                title: "El Mazo (The Mace)",
+                icon: "fa-gavel",
+                info: "Arma legendaria de la 1.21. Al caer de gran altura y acertar un golpe, anula el daño de caída y multiplica el impacto.",
+                // 3x3 slots: index 0 to 8
+                grid: [
+                    "", "Núcleo Pesado", "",
+                    "", "Vara de Brisa", "",
+                    "", "", ""
+                ]
+            },
+            crafter: {
+                title: "El Fabricador (The Crafter)",
+                icon: "fa-cogs",
+                info: "Mesa de crafteo automatizada. Con 5 lingotes de hierro, 1 mesa de crafteo, 2 polvos de redstone y 1 soltador (dispenser).",
+                grid: [
+                    "Hierro", "Hierro", "Hierro",
+                    "Hierro", "Mesa Crafteo", "Hierro",
+                    "Redstone", "Soltador", "Redstone"
+                ]
+            },
+            windcharge: {
+                title: "Carga de Viento",
+                icon: "fa-wind",
+                info: "Proyectil crafteado con una Vara de Brisa. Permite saltar grandes distancias propulsándote o activar mecanismos a distancia.",
+                grid: [
+                    "", "", "",
+                    "", "Vara de Brisa", "",
+                    "", "", ""
+                ]
+            },
+            bundle: {
+                title: "Saco (Bundle)",
+                icon: "fa-box-archive",
+                info: "Objeto de almacenamiento oficial. Permite guardar hasta 64 ítems diferentes en un solo espacio de tu inventario.",
+                grid: [
+                    "Cuerda", "Cuero", "Cuerda",
+                    "Cuero", "", "Cuero",
+                    "", "Cuero", ""
+                ]
+            },
+            wolfarmor: {
+                title: "Armadura de Lobo",
+                icon: "fa-shield-dog",
+                info: "Protege a tus lobos domesticados de explosiones de Creepers y flechas. Requiere 6 escamas de armadillo y se puede teñir.",
+                grid: [
+                    "Escama", "", "",
+                    "Escama", "Escama", "Escama",
+                    "Escama", "", "Escama"
+                ]
+            }
+        };
+
+        const craftingGrid3x3 = document.getElementById('craftingGrid3x3');
+        const craftResultSlot = document.getElementById('craftResultSlot');
+        const craftInfoText = document.getElementById('craftInfoText');
+        const recipeButtons = document.querySelectorAll('.recipe-selector-btn');
+
+        function renderRecipe(recipeKey) {
+            const recipe = recipesData[recipeKey];
+            if (!recipe) return;
+
+            craftingGrid3x3.innerHTML = '';
+            recipe.grid.forEach(item => {
+                const slot = document.createElement('div');
+                slot.className = `grid-slot ${item ? 'filled' : ''}`;
+                if (item) {
+                    slot.title = item;
+                    // Mini representation
+                    let iconHtml = '<i class="fa-solid fa-cube" style="font-size:0.9rem; color:#10b981;"></i>';
+                    if (item.includes("Hierro")) iconHtml = '<i class="fa-solid fa-square" style="color:#cbd5e1; font-size:0.8rem;"></i>';
+                    else if (item.includes("Redstone")) iconHtml = '<i class="fa-solid fa-circle" style="color:#ef4444; font-size:0.7rem;"></i>';
+                    else if (item.includes("Brisa")) iconHtml = '<i class="fa-solid fa-wind" style="color:#00e5ff; font-size:0.8rem;"></i>';
+                    else if (item.includes("Pesado")) iconHtml = '<i class="fa-solid fa-cubes" style="color:#f59e0b; font-size:0.85rem;"></i>';
+                    else if (item.includes("Cuero") || item.includes("Escama")) iconHtml = '<i class="fa-solid fa-shield" style="color:#d97736; font-size:0.8rem;"></i>';
+                    else if (item.includes("Cuerda")) iconHtml = '<i class="fa-solid fa-lines-leaning" style="color:#ffffff; font-size:0.75rem;"></i>';
+
+                    slot.innerHTML = iconHtml;
+                }
+                craftingGrid3x3.appendChild(slot);
+            });
+
+            craftResultSlot.innerHTML = `<i class="fa-solid ${recipe.icon}"></i>`;
+            craftInfoText.innerHTML = `<strong>${recipe.title}:</strong> ${recipe.info}`;
+        }
+
+        recipeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                playMinecraftSound('craft');
+                recipeButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderRecipe(btn.getAttribute('data-recipe'));
+            });
+        });
+
+        // Initialize with Mace
+        renderRecipe('mace');
+
+        // Trivia Game
+        const mcTrivia = [
+            {
+                q: "¿Qué combinación de objetos se necesita para craftear 'El Mazo' en la 1.21?",
+                opts: [
+                    "Vara de Blaze + Lingote de Netherite",
+                    "Vara de Brisa + Núcleo Pesado (Heavy Core)",
+                    "Vara del End + Bloque de Cobre",
+                    "Diamante + Vara de Brisa"
+                ],
+                correct: 1,
+                fact: "¡Exacto! El Mazo se forja con una Vara de Brisa y un Núcleo Pesado obtenido en las Bóvedas Siniestras."
+            },
+            {
+                q: "¿Cómo se comporta 'El Crujiente' (The Creaking) en el Jardín Pálido?",
+                opts: [
+                    "Explota como un Creeper cuando te acercas",
+                    "Solo te ataca si nadas bajo el agua",
+                    "Se congela si lo miras directamente y solo avanza si apartas la vista",
+                    "Vuela en círculos disparando bolas de fuego"
+                ],
+                correct: 2,
+                fact: "¡Correcto! El Crujiente tiene una mecánica de estatua: mientras lo miras a los ojos se queda inmóvil, pero si volteas corre a golpearte."
+            },
+            {
+                q: "¿Cómo se derrota definitivamente a 'El Crujiente'?",
+                opts: [
+                    "Golpeándolo 5 veces con una espada de Netherita",
+                    "Arrojándole pociones de curación",
+                    "Destruyendo su 'Corazón del Crujiente' oculto en un árbol cercano",
+                    "Encerrándolo con bloques de obsidiana"
+                ],
+                correct: 2,
+                fact: "¡Genial! El Crujiente es inmune a las armas; solo muere al romper el bloque de Corazón del Crujiente dentro del roble pálido."
+            },
+            {
+                q: "¿Qué hace especial al bloque 'El Fabricador' (Crafter) introducido en la 1.21?",
+                opts: [
+                    "Repara herramientas sin gastar experiencia",
+                    "Craftea objetos de forma 100% automática al recibir una señal de Redstone",
+                    "Convierte carbón en diamantes",
+                    "Duplica cualquier mineral que le coloques dentro"
+                ],
+                correct: 1,
+                fact: "¡Así es! Es la revolución técnica de Minecraft: permite la automatización completa de crafteos mediante pulsos de redstone."
+            },
+            {
+                q: "¿Quién interpreta a 'Steve' en la película oficial 'A Minecraft Movie'?",
+                opts: [
+                    "Pedro Pascal",
+                    "Jason Momoa",
+                    "Jack Black",
+                    "Chris Pratt"
+                ],
+                correct: 2,
+                fact: "¡Increíble! El actor Jack Black da vida a Steve con su icónica frase de presentación: 'I... am Steve!'."
+            }
+        ];
+
+        let mcQIndex = 0;
+        let mcScore = 0;
+        let mcAnswered = false;
+
+        const quizQTitle = document.getElementById('quizQTitle');
+        const quizOptsContainer = document.getElementById('quizOptsContainer');
+        const quizMcBar = document.getElementById('quizMcBar');
+        const quizCounterText = document.getElementById('quizCounterText');
+        const quizXpPointsText = document.getElementById('quizXpPointsText');
+        const quizFeedbackBox = document.getElementById('quizFeedbackBox');
+        const nextQBtn = document.getElementById('nextQBtn');
+        const quizQuestionPanel = document.getElementById('quizQuestionPanel');
+        const quizResultPanel = document.getElementById('quizResultPanel');
+        const resultScoreMc = document.getElementById('resultScoreMc');
+        const resultTitleMc = document.getElementById('resultTitleMc');
+        const resultDescMc = document.getElementById('resultDescMc');
+        const restartMcQuiz = document.getElementById('restartMcQuiz');
+        const currentXpLevel = document.getElementById('currentXpLevel');
+
+        function loadMcQuestion() {
+            mcAnswered = false;
+            const item = mcTrivia[mcQIndex];
+
+            quizMcBar.style.width = `${((mcQIndex + 1) / mcTrivia.length) * 100}%`;
+            quizCounterText.textContent = `PREGUNTA ${mcQIndex + 1} DE ${mcTrivia.length}`;
+            quizXpPointsText.innerHTML = `<i class="fa-solid fa-bolt"></i> +${mcScore * 20} XP`;
+            quizQTitle.textContent = item.q;
+
+            quizFeedbackBox.style.display = 'none';
+            nextQBtn.style.display = 'none';
+            quizOptsContainer.innerHTML = '';
+
+            item.opts.forEach((optText, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'opt-mc-btn';
+                btn.innerHTML = `
+                    <span>${optText}</span>
+                    <i class="fa-regular fa-square"></i>
+                `;
+                btn.addEventListener('click', () => handleMcChoice(idx, btn));
+                quizOptsContainer.appendChild(btn);
+            });
+        }
+
+        function handleMcChoice(idx, button) {
+            if (mcAnswered) return;
+            mcAnswered = true;
+
+            const item = mcTrivia[mcQIndex];
+            const allBtns = quizOptsContainer.querySelectorAll('.opt-mc-btn');
+
+            allBtns.forEach((b, i) => {
+                b.disabled = true;
+                if (i === item.correct) {
+                    b.classList.add('correct');
+                    b.querySelector('i').className = 'fa-solid fa-square-check';
+                }
+            });
+
+            if (idx === item.correct) {
+                playMinecraftSound('levelup');
+                mcScore++;
+                currentXpLevel.textContent = 30 + (mcScore * 14);
+                quizXpPointsText.innerHTML = `<i class="fa-solid fa-bolt"></i> +${mcScore * 20} XP`;
+                quizFeedbackBox.style.display = 'block';
+                quizFeedbackBox.style.background = 'rgba(16, 185, 129, 0.2)';
+                quizFeedbackBox.style.color = '#34d399';
+                quizFeedbackBox.style.border = '1px solid #10b981';
+                quizFeedbackBox.innerHTML = `<i class="fa-solid fa-check"></i> ${item.fact}`;
+            } else {
+                playMinecraftSound('hit');
+                button.classList.add('wrong');
+                button.querySelector('i').className = 'fa-solid fa-square-xmark';
+                quizFeedbackBox.style.display = 'block';
+                quizFeedbackBox.style.background = 'rgba(239, 68, 68, 0.2)';
+                quizFeedbackBox.style.color = '#f87171';
+                quizFeedbackBox.style.border = '1px solid #ef4444';
+                quizFeedbackBox.innerHTML = `<i class="fa-solid fa-xmark"></i> Incorrecto. ${item.fact}`;
+            }
+
+            nextQBtn.style.display = 'inline-flex';
+        }
+
+        nextQBtn.addEventListener('click', () => {
+            playMinecraftSound('click');
+            mcQIndex++;
+            if (mcQIndex < mcTrivia.length) {
+                loadMcQuestion();
+            } else {
+                showMcResult();
+            }
+        });
+
+        function showMcResult() {
+            quizQuestionPanel.style.display = 'none';
+            quizResultPanel.style.display = 'block';
+            resultScoreMc.textContent = `${mcScore} / ${mcTrivia.length}`;
+
+            if (mcScore === mcTrivia.length) {
+                playMinecraftSound('levelup');
+                resultTitleMc.textContent = "🏆 ¡Armadura de Netherita Completa!";
+                resultDescMc.textContent = "¡Eres un maestro absoluto de Minecraft! Conoces al milímetro todas las novedades de la 1.21 y el Jardín Pálido.";
+                currentXpLevel.textContent = "100";
+                triggerPixelConfetti();
+            } else if (mcScore >= 3) {
+                resultTitleMc.textContent = "💎 ¡Armadura de Diamante!";
+                resultDescMc.textContent = "¡Gran trabajo! Tienes un conocimiento muy avanzado sobre el juego.";
+            } else {
+                resultTitleMc.textContent = "⛏️ ¡Pico de Hierro!";
+                resultDescMc.textContent = "Buen intento. Revisa la guía de arriba para dominar todas las nuevas mecánicas.";
+            }
+        }
+
+        restartMcQuiz.addEventListener('click', () => {
+            playMinecraftSound('click');
+            mcQIndex = 0;
+            mcScore = 0;
+            currentXpLevel.textContent = "30";
+            quizResultPanel.style.display = 'none';
+            quizQuestionPanel.style.display = 'block';
+            loadMcQuestion();
+        });
+
+        // Pixel confetti animation
+        function triggerPixelConfetti() {
+            const canvas = document.getElementById('mcCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const mcColors = ['#10b981', '#00ff9d', '#2ecc71', '#d97736', '#f59e0b', '#c084fc', '#e2e8f0'];
+
+            for (let i = 0; i < 140; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * -canvas.height,
+                    size: Math.random() * 8 + 6,
+                    color: mcColors[Math.floor(Math.random() * mcColors.length)],
+                    speed: Math.random() * 5 + 3,
+                    rotation: Math.random() * 360
+                });
+            }
+
+            let frame = 0;
+            function anim() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.y += p.speed;
+                    ctx.fillStyle = p.color;
+                    ctx.fillRect(p.x, p.y, p.size, p.size);
+                });
+
+                frame++;
+                if (frame < 220) {
+                    requestAnimationFrame(anim);
+                } else {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+            }
+            anim();
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMcQuestion();
+        });
+    </script>
+</body>
+</html>
