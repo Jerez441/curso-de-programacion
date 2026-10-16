@@ -1,0 +1,17 @@
+.caja {
+  width: 200px;
+  height: 100px;
+  margin: 10 auto;
+}
+
+.caja-1 {
+  background-color: #ff5733;
+}
+
+.caja-2 {
+  background-color: #33ff57;
+}
+
+.caja-3 {
+  background-color: #3357ff;
+}

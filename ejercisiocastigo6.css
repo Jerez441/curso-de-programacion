@@ -1,0 +1,26 @@
+.form-preguntas {
+  max-width: 300px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15;
+  padding: 8px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+}

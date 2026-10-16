@@ -1,0 +1,28 @@
+.tarjeta {
+  width: 300px;
+  height: 350px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  margin: 50px auto;
+}
+
+.cabecera {
+  width: 100%;
+  height: 120px;
+  background-color: #007bff;
+}
+
+.foto-perfil {
+  position: abosulte;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 80px;
+  left: 20px;
+  border: 3px solid white;
+}
+
+.contenido {
+  padding: 50px 20px 20px 20px;
+}

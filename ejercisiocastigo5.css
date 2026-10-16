@@ -1,0 +1,13 @@
+.articulo {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.imagen-flotante {
+  float: left;
+  margin-right: 15;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

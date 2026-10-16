@@ -1,0 +1,29 @@
+    .contenedor {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+    }
+
+    /* Personalización de los tipos de listas anidadas */
+    ol.indice-principal {
+        list-style-type: decimal;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    ol.indice-principal ul {
+        list-style-type: square;
+        font-weight: normal;
+    }
+
+    ol.indice-principal ul ol {
+        list-style-type: lower-alpha;
+    }
